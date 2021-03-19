@@ -478,6 +478,17 @@
         })
 
     </script> 
+    <script>
+    $(document).ready(function() {
+        setTimeout(getOrders() {
+
+     }, 5000);
+    });
+
+    setTimeout(){
+        getOrders();
+    }
+</script>
     
     <script>
         function getOrders() {
