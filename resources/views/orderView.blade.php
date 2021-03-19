@@ -479,15 +479,9 @@
 
     </script> 
     <script>
-    $(document).ready(function() {
-        setTimeout(getOrders() {
-
-     }, 5000);
-    });
-
-    setTimeout(){
-        getOrders();
-    }
+    window.setInterval(function(){
+  getOrders();
+}, 5000);
 </script>
     
     <script>
@@ -499,6 +493,7 @@
 
                     var data = this.responseText;
                     document.getElementById("allcards").innerHTML =data ; 
+                   // alert();
                     
 
                 }

@@ -478,7 +478,11 @@
         })
 
     </script> 
-    
+    <script>
+    window.setInterval(function(){
+        getPreparingOrders();
+}, 5000);
+</script>
     <script>
         function getPreparingOrders() {
             var xhttp = new XMLHttpRequest();

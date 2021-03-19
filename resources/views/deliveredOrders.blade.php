@@ -478,7 +478,11 @@
         })
 
     </script> 
-    
+    <script>
+    window.setInterval(function(){
+        deliveredOrders();
+}, 5000);
+</script>
     <script>
         function deliveredOrders() {
             var xhttp = new XMLHttpRequest();

@@ -478,7 +478,11 @@
         })
 
     </script> 
-    
+    <script>
+    window.setInterval(function(){
+        getDeliveryPendingOrders();
+}, 5000);
+</script>
     <script>
 
 
@@ -492,7 +496,7 @@
 
                     var data = this.responseText;
                     document.getElementById("allcards").innerHTML =data ; 
-                    
+                 
 
                 }
             };
