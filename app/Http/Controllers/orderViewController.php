@@ -65,9 +65,9 @@ class orderViewController extends Controller
 
     public function getOrders(){
         $dateNow= Carbon::now()->toDateString();
-         //dd($dateNow);
-        $dateStart= '2010-01-28 00:00:00';//date('d-m-y').' 00:00:00';
-        $dateEnd= '2021-03-23 23:59:59';;//date('d-m-y').' 23:59:59';
+        //  dd($dateNow);
+        $dateStart=$dateNow.' 00:00:00';//date('d-m-y').' 00:00:00';
+        $dateEnd= $dateNow.' 23:59:59';//date('d-m-y').' 23:59:59';
        // dd($dateStart);
         $InvoiceNo=146;
         $Allcards="";
@@ -157,14 +157,14 @@ foreach ($invoiceDetails as $obj){
 
     public function getPreparingOrders(){
         $dateNow= Carbon::now()->toDateString();
-         //dd($dateNow);
+        //  dd($dateNow);
         $dateStart= '2010-01-28 00:00:00';//date('d-m-y').' 00:00:00';
         $dateEnd= '2021-03-23 23:59:59';;//date('d-m-y').' 23:59:59';
        // dd($dateStart);
         $InvoiceNo=146;
         $Allcards="";
        // $card="";
-       $invoiceDetails=DB::select('select * from tblsaleinvoice where BillStatus="PREPARING"');
+       $invoiceDetails=DB::select('select * from tblsaleinvoice where DateStamp between "'.$dateStart .'"and"'.$dateEnd.'" and BillStatus="PREPARING"');
                                 
 //dd($data);
 foreach ($invoiceDetails as $obj){
@@ -259,7 +259,7 @@ foreach ($invoiceDetails as $obj){
         $InvoiceNo=146;
         $Allcards="";
        // $card="";
-       $invoiceDetails=DB::select('select * from tblsaleinvoice where BillStatus="PREPARED"');
+       $invoiceDetails=DB::select('select * from tblsaleinvoice where DateStamp between "'.$dateStart .'"and"'.$dateEnd.'" and BillStatus="PREPARED"');
                                 
 //dd($data);
 foreach ($invoiceDetails as $obj){
