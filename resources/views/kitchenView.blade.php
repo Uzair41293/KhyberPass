@@ -34,9 +34,9 @@
             -webkit-box-shadow: 10px 10px 37px 0px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 10px 10px 37px 0px rgba(0, 0, 0, 0.75);
             box-shadow: 10px 10px 37px 0px rgba(0, 0, 0, 0.75);
-            background: rgb(0, 0, 0);
-            background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 81%);
-            color: #ffbf00 !important;
+            background: rgb(40, 45, 35);
+            /* background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 81%); */
+            color: #ffffff !important;
         }
 
         .menu {
