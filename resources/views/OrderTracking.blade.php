@@ -271,7 +271,7 @@
                 <br><br>
                 <div class="row">
                     <div class="col-md-12">
-                        <a href="orev" style="background-color: #0abf53 ; color: #fff;" class="btn  w-100">Go
+                        <a href="newmenu" style="background-color: #0abf53 ; color: #fff;" class="btn  w-100">Go
                             Back</a>
                     </div>
                 </div>

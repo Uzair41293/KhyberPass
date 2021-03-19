@@ -57,6 +57,7 @@ Route::get('/getPreparingOrders',[orderViewController::class, 'getPreparingOrder
 Route::get('/setPrepared/{id}',[orderViewController::class, 'setPreparedOrders'] );
 Route::get('/getDeliveryPendingOrders',[orderViewController::class, 'getDeliveryPendingOrders'] );
 Route::get('/setDelivered/{id}',[orderViewController::class, 'setDelivered'] );
+Route::get('/deliveredOrders',[orderViewController::class, 'deliveredOrders'] );
 
 Route::get('/rev', function () {
     
@@ -150,11 +151,15 @@ Route::get('/adi', function () {
     return view('adminDineIn');
 });
 
-Route::get('/po', function () {
+Route::get('/kv', function () {
     return view('kitchenView');
 });
 
 
 Route::get('/dpo', function () {
     return view('deliveryPendingOrders');
+});
+
+Route::get('/do', function () {
+    return view('deliveredOrders');
 });

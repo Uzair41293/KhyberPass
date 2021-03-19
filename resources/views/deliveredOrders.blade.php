@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <meta http-equiv="refresh" content="10"> -->
-    <title>Ready To Deliver</title>
+    <title>Delivered Orders</title>
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
@@ -89,9 +89,9 @@
     </style>
 </head>
 
-<body  onload="getDeliveryPendingOrders()">
+<body  onload="deliveredOrders()">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <h2>Delivery Pending Orders</h2>
+    <h2>Delivered Orders</h2>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -480,11 +480,7 @@
     </script> 
     
     <script>
-
-
-
-
-        function getDeliveryPendingOrders() {
+        function deliveredOrders() {
             var xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function () {
 
@@ -497,31 +493,12 @@
                 }
             };
             //alert("ljd");
-            xhttp.open("GET", "./getDeliveryPendingOrders", true);
+            xhttp.open("GET", "./deliveredOrders", true);
 
             xhttp.send();
         }
 
     </script>
-    <script>
-     function getID(id){
-    alert(id);
     
-    var xhttp = new XMLHttpRequest();
-            xhttp.onreadystatechange = function () {
-                
-                if (this.readyState == 4 && this.status == 200) {
-
-                    var data = this.responseText;
-                    alert(data);
-                }
-            };
-            //alert("ljd");
-            xhttp.open("GET", "./setDelivered/"+id, true);
-
-            xhttp.send();
-        
-     }
-    </script>
 </body>
 </html>
