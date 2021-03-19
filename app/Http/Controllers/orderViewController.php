@@ -324,10 +324,4 @@ foreach ($invoiceDetails as $obj){
 }
 
 
-// <p>
-//                                 '.$obj->CustomerID.' <br>
-//                                 '.$obj->CompanyName.'<br>
-//                                 '.$obj->CompanyCategory.' 
-                                
-                               
-//                                 </p>
+   

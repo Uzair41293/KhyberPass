@@ -154,6 +154,7 @@ Route::get('/po', function () {
     return view('kitchenView');
 });
 
+
 Route::get('/dpo', function () {
     return view('deliveryPendingOrders');
 });
