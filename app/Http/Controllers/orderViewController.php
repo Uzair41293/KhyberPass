@@ -45,7 +45,21 @@ class orderViewController extends Controller
       
       return "Order is Delivered";
     }
-   
+
+    public function receivedOrders($id){
+
+        DB::table('tblsaleinvoice')
+        ->where('InvoiceNumber', $id)
+        ->update([
+        
+        'BillStatus'=>"RECEIVED"
+        ]);
+      
+      return "Order Is Received";
+    }
+
+
+
 
 
 
@@ -212,7 +226,7 @@ foreach ($invoiceDetails as $obj){
             Total Amount:'.$TotalAmount.'
         <div class="card-footer text-center">
             <button class="btn btn-danger">Cancel</button>
-            <button class="btn btn-success" onclick="getID('.$obj->InvoiceNumber.')">Ready</button>
+            <button class="btn btn-success" onclick="getID('.$obj->InvoiceNumber.')">Prepared</button>
         </div>                             
         </div>
         </div>
@@ -307,7 +321,7 @@ foreach ($invoiceDetails as $obj){
             Total Amount:'.$TotalAmount.'
         <div class="card-footer text-center">
             <button class="btn btn-danger">Cancel</button>
-            <button class="btn btn-success" onclick="getID('.$obj->InvoiceNumber.')">Deliver</button>
+            <button class="btn btn-success" onclick="getID('.$obj->InvoiceNumber.')">Dispatch</button>
             </div>                             
         </div>
         </div>
@@ -398,7 +412,8 @@ foreach ($invoiceDetails as $obj){
         '.$innerProducts.'
             Total Amount:'.$TotalAmount.'
         <div class="card-footer text-center">
-           
+        <button class="btn btn-danger">Cancel</button>
+        <button class="btn btn-success" onclick="getID('.$obj->InvoiceNumber.')">Received</button>
             </div>                             
         </div>
         </div>

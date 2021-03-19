@@ -499,6 +499,25 @@
         }
 
     </script>
+    <script>
+     function  getID(id){
+    alert(id);
     
+    var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function () {
+                
+                if (this.readyState == 4 && this.status == 200) {
+
+                    var data = this.responseText;
+                    alert(data);
+                }
+            };
+            //alert("ljd");
+            xhttp.open("GET", "./receivedOrders/"+id, true);
+
+            xhttp.send();
+        
+     }
+    </script>
 </body>
 </html>

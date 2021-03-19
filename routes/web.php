@@ -58,6 +58,16 @@ Route::get('/setPrepared/{id}',[orderViewController::class, 'setPreparedOrders']
 Route::get('/getDeliveryPendingOrders',[orderViewController::class, 'getDeliveryPendingOrders'] );
 Route::get('/setDelivered/{id}',[orderViewController::class, 'setDelivered'] );
 Route::get('/deliveredOrders',[orderViewController::class, 'deliveredOrders'] );
+Route::get('/receivedOrders/{id}',[orderViewController::class, 'receivedOrders'] );
+
+
+
+
+
+
+
+
+
 
 Route::get('/rev', function () {
     
